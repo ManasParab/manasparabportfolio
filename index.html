@@ -16,6 +16,25 @@
     <script>
         tailwind.config = {
             theme: {
+                screens: {
+                    'sm': '640px',
+                    // => @media (min-width: 640px) { ... }
+
+                    'md': '768px',
+                    // => @media (min-width: 768px) { ... }
+
+                    'lg': '1024px',
+                    // => @media (min-width: 1024px) { ... }
+
+                    'xl': '1280px',
+                    // => @media (min-width: 1280px) { ... }
+
+                    '1.5xl': '1440px',
+                    // => @media (min-width: 1440px) { ... }
+
+                    '2xl': '1536px',
+                    // => @media (min-width: 1536px) { ... }
+                },
                 fontSize: {
                     xs: '0.75rem', // 12px
                     sm: '0.875rem', // 14px
@@ -27,14 +46,13 @@
                     '4xl': '2.25rem', // 36px
                     '4.5xl': '2.5rem',
                     '5xl': '3rem', // 48px
+                    '5.5xl': '3.5rem',
                     '6xl': '3.75rem', // 60px
                     '7xl': '4.5rem', // 72px
                     '8xl': '6rem', // 96px
                     '9xl': '8rem', // 128px
-                }
-                ,
+                },
                 extend: {
-
                     colors: {
                         cdarkBlue: '#02111a',
                         cblue: '#2e7ead',
@@ -53,12 +71,12 @@
         <source src="assets/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
     </video>
 
-    <header class="fixed top-0 left-0 z-40 w-full" id="navbar">
+    <header class="fixed top-0 left-0 z-40 w-full xl:px-16 xl:py-2 text-white" id="navbar">
 
-        <div class=" container px-16 py-2 text-white">
-            <nav class="flex items-center w-full p-5">
+        <div class="container xl:px-16 xl:py-2 text-white">
+            <nav class="flex items-center w-full p-5 xl:p-0">
                 <a href="#"
-                    class="curosr-pointer text-2xl text-cteal border rounded-full px-4 py-1 border-cteal border-2"><span
+                    class="curosr-pointer text-2xl text-cteal border rounded-full px-4 py-1 border-cteal border-2 xl:mr-10"><span
                         class="font-extrabold text-3xl">M</span><span class="none">anas </span><span
                         class="font-extrabold text-3xl">P</span><span>arab</span></a>
                 <ul class="flex-wrap text-center mx-auto rounded-full">
@@ -82,18 +100,18 @@
 
                 <div class="flex flex-cols gap-x-1 w-auto h-auto px-0 py-1">
 
-                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal"><img
-                            src="assets/linkedin.svg" alt="LinkedIn" class="w-5 h-5 m-2"></a>
-                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal"><img
-                            src="assets/x.svg" alt="X (Twitter)" class="w-5 h-5 m-2"></a>
-                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal"><img
-                            src="assets/github.svg" alt="Github" class="w-5 h-5 m-2"></a>
-                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal"><img
-                            src="assets/insta.svg" alt="Instagram" class="w-5 h-5 m-2"></a>
-                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal"><img
-                            src="assets/threads.svg" alt="Threads" class="w-5 h-5 m-2"></a>
-                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal"><img
-                            src="assets/fb.svg" alt="Facebook" class="w-5 h-5 m-2"></a>
+                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal xl:m-2"><img
+                            src="assets/linkedin.svg" alt="LinkedIn" class="w-5 h-5"></a>
+                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal xl:m-2"><img
+                            src="assets/x.svg" alt="X (Twitter)" class="w-5 h-5"></a>
+                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal xl:m-2"><img
+                            src="assets/github.svg" alt="Github" class="w-5 h-5"></a>
+                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal xl:m-2"><img
+                            src="assets/insta.svg" alt="Instagram" class="w-5 h-5"></a>
+                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal xl:m-2"><img
+                            src="assets/threads.svg" alt="Threads" class="w-5 h-5"></a>
+                    <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal xl:m-2"><img
+                            src="assets/fb.svg" alt="Facebook" class="w-5 h-5"></a>
 
                 </div>
             </nav>
@@ -115,14 +133,15 @@
 
     <main class="mt-0 absolute top-52">
 
-        <div class="hero-background py-16">
-            <div class="h-3/12 w-3/12 rounded-full overflow-hidden border-2 text-center p-2 right-52 -top-10 absolute">
+        <div class="hero-background xl:py-8 1.5xl:py-10">
+            <div
+                class=" xl:h-3/12 xl:w-3/12 lg:h-3/12 lg:w-3/12 rounded-full overflow-hidden border-2 text-center p-2 right-52 xl:-top-5 1.5xl:-top-10 2xl:-top-12 absolute">
                 <img src="assets/shortmanasprb.png" alt="" class="rounded-full">
             </div>
 
             <div class="ml-52 mt-42">
                 <h1 class="text-4.5xl font-semibold mb-0 leading-tight" id="welcometxt">Hello !</h1>
-                <h1 class="text-6xl font-bold text-clightteal -mb-1">I'm Manas Parab</h1>
+                <h1 class="xl:text-5.5xl 1.5xl:text-6xl font-bold text-clightteal -mb-1">I'm Manas Parab</h1>
                 <h1 class="text-2xl font-extralight ml-1 mb-4">Student&nbsp;&nbsp;&&nbsp;&nbsp;Developer</h1>
                 <h1 class="text-1xl text-cblue font-normal ml-1 w-2/5 leading-7">I am a student with 3 years of
                     experices in various technologies. I have developed many projects implmenting my learnings, with
