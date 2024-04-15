@@ -21,7 +21,7 @@ function validateName(input) {
   input.value = input.value.replace(/[^A-Za-z\s]/g, "");
 }
 
-document.addEventListener("DOMContentLaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   var overlay = document.getElementById("overlay");
   overlay.style.display = "block";
 
@@ -41,3 +41,5 @@ document.addEventListener("DOMContentLaded", function () {
     }
   });
 });
+
+// ==========================================================================
