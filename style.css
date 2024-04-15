@@ -3,7 +3,18 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  overflow-x: hidden;
+  overflow-y: scroll;  
+  
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
 }
 
 #myVideo{
@@ -50,7 +61,7 @@ body {
 
 .hero-background {
   background-image: url("assets/meshpattern.png");
-  width: 103%;
+  width: 100%;
   background-position: center;
 }
 
