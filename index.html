@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="app.js"></script>
@@ -18,40 +17,29 @@
             theme: {
                 screens: {
                     'sm': '640px',
-                    // => @media (min-width: 640px) { ... }
-
                     'md': '768px',
-                    // => @media (min-width: 768px) { ... }
-
                     'lg': '1024px',
-                    // => @media (min-width: 1024px) { ... }
-
                     'xl': '1280px',
-                    // => @media (min-width: 1280px) { ... }
-
                     '1.5xl': '1440px',
-                    // => @media (min-width: 1440px) { ... }
-
                     '2xl': '1536px',
-                    // => @media (min-width: 1536px) { ... }
                 },
                 fontSize: {
-                    xs: '0.75rem', // 12px
-                    sm: '0.875rem', // 14px
-                    base: '1rem', // 16px
-                    lg: '1.125rem', // 18px
-                    xl: '1.25rem', // 20px
-                    '2xl': '1.5rem', // 24px
-                    '3xl': '1.875rem', // 30px
+                    xs: '0.75rem',
+                    sm: '0.875rem',
+                    base: '1rem',
+                    lg: '1.125rem',
+                    xl: '1.25rem',
+                    '2xl': '1.5rem',
+                    '3xl': '1.875rem',
                     '3.5xl': '2rem',
-                    '4xl': '2.25rem', // 36px
+                    '4xl': '2.25rem',
                     '4.5xl': '2.5rem',
-                    '5xl': '3rem', // 48px
+                    '5xl': '3rem',
                     '5.5xl': '3.5rem',
-                    '6xl': '3.75rem', // 60px
-                    '7xl': '4.5rem', // 72px
-                    '8xl': '6rem', // 96px
-                    '9xl': '8rem', // 128px
+                    '6xl': '3.75rem',
+                    '7xl': '4.5rem',
+                    '8xl': '6rem',
+                    '9xl': '8rem',
                 },
                 extend: {
                     colors: {
@@ -67,40 +55,40 @@
 </head>
 
 <body class="bg-cdarkBlue text-cteal">
-
     <video autoplay muted loop id="myVideo">
         <source src="assets/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
     </video>
-
-    <header class="fixed top-0 left-0 z-40 w-full xl:px-16 xl:py-2 text-white" id="navbar">
-
-        <div class="container xl:px-16 xl:py-2 text-white">
-            <nav class="flex items-center w-full p-5 xl:p-0">
-                <a href="#"
-                    class="curosr-pointer text-2xl text-cteal border rounded-full px-4 py-1 border-cteal border-2 xl:mr-10"><span
-                        class="font-extrabold text-3xl">M</span><span class="none">anas </span><span
-                        class="font-extrabold text-3xl">P</span><span>arab</span></a>
-                <ul class="flex-wrap text-center mx-auto rounded-full">
+    <header class="fixed top-0 left-0 z-40 w-full lg:px-16 lg:py-2 mt-4 text-white" id="navbar">
+        <div class="lg:container lg:px-16 lg:py-2 text-white">
+            <nav class="lg:flex items-center w-full p-5 lg:p-0">
+                <div class="flex justify-center w-full lg:w-auto"> <!-- Added flex container -->
+                    <a href="#"
+                        class="cursor-pointer sm:text-4xl lg:text-2xl text-cteal border rounded-full sm:px-6 sm:-py-2 lg:px-3 lg:py-0 border-cteal border-2 xl:mr-10">
+                        <span class="font-extrabold md:text-5xl sm:-mr-2 lg:-mr-1 lg:text-3xl">M</span>
+                        <span class="none">anas </span>
+                        <span class="font-extrabold md:text-5xl sm:-mr-2 lg:-mr-1 lg:text-3xl">P</span>
+                        <span>arab</span>
+                    </a>
+                </div>
+                <ul class="sm:hidden lg:block flex-wrap text-center mx-auto rounded-full">
                     <li
-                        class="list-none inline-block m-2 px-2 py-1 border-transparent border-2 rounded-full hover:border-cteal">
+                        class="list-none lg:inline-block m-2 px-2 py-1 border-transparent border-2 rounded-full hover:border-cteal">
                         <a href="#" class="p-1">About</a>
                     </li>
                     <li
-                        class="list-none inline-block m-2 px-2 py-1 border-transparent border-2 rounded-full hover:border-cteal">
+                        class="list-none lg:inline-block m-2 px-2 py-1 border-transparent border-2 rounded-full hover:border-cteal">
                         <a href="#" class="p-1">Skills</a>
                     </li>
                     <li
-                        class="list-none inline-block m-2 px-2 py-1 border-transparent border-2 rounded-full hover:border-cteal">
+                        class="list-none lg:inline-block m-2 px-2 py-1 border-transparent border-2 rounded-full hover:border-cteal">
                         <a href="#" class="p-1">Projects</a>
                     </li>
                     <li
-                        class="list-none inline-block m-2 px-2 py-1 border-transparent border-2 rounded-full hover:border-cteal">
+                        class="list-none lg:inline-block m-2 px-2 py-1 border-transparent border-2 rounded-full hover:border-cteal">
                         <a href="#" class="p-1">Contact</a>
                     </li>
                 </ul>
-
-                <div class="flex flex-cols gap-x-1 w-auto h-auto px-0 py-1">
-
+                <div class="sm:hidden lg:flex md:flex-row md:gap-x-1 w-auto h-auto px-0 py-1">
                     <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal xl:m-2"><img
                             src="assets/linkedin.svg" alt="LinkedIn" class="w-5 h-5"></a>
                     <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal xl:m-2"><img
@@ -113,12 +101,12 @@
                             src="assets/threads.svg" alt="Threads" class="w-5 h-5"></a>
                     <a href="#" class="border border-transparent border-2 rounded-full hover:border-cteal xl:m-2"><img
                             src="assets/fb.svg" alt="Facebook" class="w-5 h-5"></a>
-
                 </div>
             </nav>
         </div>
-
     </header>
+
+
 
     <div id="overlay">
         <div id="modal">
@@ -130,29 +118,25 @@
             </form>
         </div>
     </div>
-
-
-    <main class="mt-0 absolute xl:top-52 lg:top-48">
-
-        <div class="hero-background w-full xl:py-8 1.5xl:py-10 lg:py-8">
+    <main class="mt-0 absolute w-full xl:top-56 lg:top-48">
+        <div class="hero-background 1.5xl:py-10 lg:py-8">
             <div
                 class=" xl:h-3/12 xl:w-3/12 lg:h-3/12 lg:w-3/12 rounded-full overflow-hidden border-2 text-center p-2 lg:right-44 xl:right-52 lg:-top-5 xl:-top-8 1.5xl:-top-10 2xl:-top-12 absolute">
                 <img src="assets/shortmanasprb.png" alt="" class="rounded-full">
             </div>
-
             <div class="lg:ml-44 xl:ml-52 xl:mt-42">
                 <h1 class="xl:text-4.5xl lg:text-3.5xl font-semibold mb-0 leading-tight" id="welcometxt">Hello !</h1>
                 <h1 class="xl:text-5xl 1.5xl:text-6xl lg:text-4xl font-bold text-clightteal -mb-1">I'm Manas Parab</h1>
                 <h1 class="xl:text-2xl font-extralight ml-1 mb-4">Student&nbsp;&nbsp;&&nbsp;&nbsp;Developer</h1>
-                <h1 class="xl:text-1xl lg:text-sm lg:font-semibold text-cblue font-normal ml-1 w-2/5 lg:leading-6 xl:leading-7">I am a student with 3 years of
+                <h1
+                    class="xl:text-1xl lg:text-sm lg:font-semibold text-cblue font-normal ml-1 w-2/5 lg:leading-6 xl:leading-7">
+                    I am a student with 3 years of
                     experices in various technologies. I have developed many projects implmenting my learnings, with
-                    an aim to make a positive change in the society.</h1>
-
+                    an aim to make a positive change in the society.
+                </h1>
             </div>
         </div>
-
     </main>
-
 </body>
 
 </html>
