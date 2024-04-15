@@ -3,6 +3,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 #myVideo{
@@ -49,8 +50,7 @@ body {
 
 .hero-background {
   background-image: url("assets/meshpattern.png");
-  width: 100%;
-  height: auto;
+  width: 103%;
   background-position: center;
 }
 
