@@ -7,6 +7,12 @@
   <meta name="theme-color" content="#f2efe8">
   <meta name="description" content="Manas Parab — product-minded engineer, builder and curious mind.">
   <title>Manas Parab — The Personal Edition</title>
+  <script>
+    const themePreferenceBeforeRender = localStorage.getItem("manas-chronicle-theme");
+    if (themePreferenceBeforeRender === "light" || themePreferenceBeforeRender === "dark") {
+      document.documentElement.dataset.theme = themePreferenceBeforeRender;
+    }
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -21,6 +27,16 @@
       <nav class="topline-right" id="site-navigation" aria-label="Main navigation">
         <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a
           href="#skills">Skills</a><a href="#contact">Contact ↗</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="theme-icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+          </svg>
+          <svg class="theme-icon-moon" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M20.2 15.4A8.5 8.5 0 0 1 8.6 3.8 8.5 8.5 0 1 0 20.2 15.4Z"></path>
+          </svg>
+          <span>Dark mode</span>
+        </button>
       </nav>
     </header>
     <section class="masthead">
