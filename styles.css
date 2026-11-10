@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap");
 :root {
+  color-scheme: light;
   --paper: #f2efe8;
   --ink: #171715;
   --muted: #77736b;
@@ -30,23 +31,6 @@
   --surface-solid: #282724;
   --accent-wash: rgb(226 123 112 / 12%);
   --rule-rgb: 87 83 77;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --paper: #1d1c1a;
-    --ink: #eee9df;
-    --muted: #b2aa9e;
-    --rule: #57534d;
-    --red: #e27b70;
-    --body-text: #d0c9bd;
-    --body-strong: #d9d2c7;
-    --body-secondary: #c1b9ad;
-    --surface: rgb(255 255 255 / 4%);
-    --surface-solid: #282724;
-    --accent-wash: rgb(226 123 112 / 12%);
-    --rule-rgb: 87 83 77;
-  }
 }
 * {
   box-sizing: border-box;
@@ -142,13 +126,28 @@ a:hover {
 :root[data-theme="dark"] .theme-icon-moon {
   display: block;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-icon-sun {
-    display: none;
-  }
-  :root:not([data-theme="light"]) .theme-icon-moon {
-    display: block;
-  }
+.theme-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.theme-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font: 9px var(--mono);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.theme-remember-input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--red);
+}
+.theme-remember:focus-within {
+  color: var(--red);
 }
 .menu-toggle {
   display: none;
@@ -727,13 +726,21 @@ footer {
   .topline-right a:last-child {
     border-bottom: 0;
   }
+  .topline-right .theme-controls {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    margin: 8px 0 4px;
+    padding: 12px 0 4px;
+    border-top: 1px solid var(--rule);
+  }
   .topline-right .theme-toggle {
     justify-content: flex-start;
-    margin: 8px 0 4px;
-    padding: 12px 0;
+    padding: 6px 0;
     border: 0;
-    border-top: 1px solid var(--rule);
-    font-size: 10px;
+  }
+  .topline-right .theme-remember {
+    padding: 5px 0;
   }
 }
 @media (max-width: 760px) {
