@@ -131,24 +131,6 @@ a:hover {
   align-items: center;
   gap: 12px;
 }
-.theme-remember {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--muted);
-  font: 9px var(--mono);
-  letter-spacing: 0.04em;
-  cursor: pointer;
-}
-.theme-remember-input {
-  width: 14px;
-  height: 14px;
-  margin: 0;
-  accent-color: var(--red);
-}
-.theme-remember:focus-within {
-  color: var(--red);
-}
 .menu-toggle {
   display: none;
   width: 42px;
@@ -738,9 +720,6 @@ footer {
     justify-content: flex-start;
     padding: 6px 0;
     border: 0;
-  }
-  .topline-right .theme-remember {
-    padding: 5px 0;
   }
 }
 @media (max-width: 760px) {

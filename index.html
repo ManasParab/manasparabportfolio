@@ -7,13 +7,6 @@
   <meta name="theme-color" content="#f2efe8">
   <meta name="description" content="Manas Parab — product-minded engineer, builder and curious mind.">
   <title>Manas Parab — The Personal Edition</title>
-  <script>
-    const rememberThemeBeforeRender = localStorage.getItem("manas-chronicle-remember-theme") === "true";
-    const themePreferenceBeforeRender = localStorage.getItem("manas-chronicle-theme");
-    if (rememberThemeBeforeRender && (themePreferenceBeforeRender === "light" || themePreferenceBeforeRender === "dark")) {
-      document.documentElement.dataset.theme = themePreferenceBeforeRender;
-    }
-  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -39,10 +32,6 @@
             </svg>
             <span>Dark mode</span>
           </button>
-          <label class="theme-remember">
-            <input class="theme-remember-input" type="checkbox">
-            <span>Remember my choice</span>
-          </label>
         </div>
       </nav>
     </header>

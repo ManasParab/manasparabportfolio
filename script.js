@@ -1,10 +1,7 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-navigation");
 const themeToggle = document.querySelector(".theme-toggle");
-const rememberThemeToggle = document.querySelector(".theme-remember-input");
 const themeColor = document.querySelector('meta[name="theme-color"]');
-const themePreferenceKey = "manas-chronicle-theme";
-const rememberThemeKey = "manas-chronicle-remember-theme";
 
 const applyTheme = (theme) => {
   const isDark = theme === "dark";
@@ -17,36 +14,11 @@ const applyTheme = (theme) => {
   themeColor?.setAttribute("content", isDark ? "#1d1c1a" : "#f2efe8");
 };
 
-if (themeToggle && rememberThemeToggle) {
-  const storedPreference = localStorage.getItem(themePreferenceKey);
-  const shouldRemember = localStorage.getItem(rememberThemeKey) === "true";
-  const initialTheme =
-    shouldRemember && (storedPreference === "light" || storedPreference === "dark")
-      ? storedPreference
-      : "light";
-
-  rememberThemeToggle.checked = shouldRemember && (storedPreference === "light" || storedPreference === "dark");
-  applyTheme(initialTheme);
-
-  const savePreference = (theme) => {
-    if (rememberThemeToggle.checked) {
-      localStorage.setItem(themePreferenceKey, theme);
-      localStorage.setItem(rememberThemeKey, "true");
-      return;
-    }
-    localStorage.removeItem(themePreferenceKey);
-    localStorage.removeItem(rememberThemeKey);
-  };
-
+if (themeToggle) {
+  applyTheme("light");
   themeToggle.addEventListener("click", () => {
     const nextTheme = themeToggle.getAttribute("aria-pressed") === "true" ? "light" : "dark";
     applyTheme(nextTheme);
-    savePreference(nextTheme);
-  });
-
-  rememberThemeToggle.addEventListener("change", () => {
-    const currentTheme = themeToggle.getAttribute("aria-pressed") === "true" ? "dark" : "light";
-    savePreference(currentTheme);
   });
 }
 
