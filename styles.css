@@ -656,6 +656,10 @@ a:hover {
   color: var(--muted);
   margin-bottom: 24px;
 }
+.contact-email {
+  color: var(--red);
+  font-weight: 600;
+}
 .contact-links {
   display: flex;
   justify-content: center;
